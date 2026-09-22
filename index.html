@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhyTronicx</title>
+    <title>PhyTronicx | Electronics & Digital Fabrication</title>
     
-    <!-- أيقونة تبويب المتصفح (Favicon) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="PhyTronicx.png">
     
-    <!-- خط AMIRI أنيق ومحايد -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Electrolize&display=swap" rel="stylesheet">
-    <!-- أيقونات FontAwesome -->
+    <!-- Google Fonts (Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- ربط ملف CSS الخارجي -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. HEADER (الهيدر في الأعلى) -->
+    <!-- 1. HEADER -->
     <header class="header">
         <div class="header-container">
             <div class="logo-area">
@@ -27,98 +25,98 @@
                 <span class="brand-name">PhyTronicx</span>
             </div>
             <nav class="nav-links">
-                <a href="#home">الرئيسية</a>
-                <a href="#services">خدماتنا</a>
-                <a href="#about">من نحن</a>
-                <a href="#contact">تواصل معنا</a>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- 2. FULL-WIDTH SLIDER (معرض صور منزلق بكامل عرض الشاشة) -->
+    <!-- 2. FULL-WIDTH SLIDER -->
     <section class="slider-section" id="home">
         <div class="slider-container">
             <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200" alt="إلكترونيات">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200" alt="Electronics">
                 <div class="slide-caption">
-                    <h2>المكونات الإلكترونية والبوردات</h2>
-                    <p>أحدث الدوائر والحساسات لمشاريعك الهندسية</p>
+                    <h2>Electronic Components & Boards</h2>
+                    <p>High-grade microcontrollers and sensors for engineering projects.</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200" alt="طباعة 3D">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200" alt="3D Printing">
                 <div class="slide-caption">
-                    <h2>خدمات الطباعة ثلاثية الأبعاد 3D</h2>
-                    <p>دقة عالية في تنفيذ المجسمات وبخامات متعددة</p>
+                    <h2>3D Printing Services</h2>
+                    <p>Precision prototyping using PLA, ABS, and PETG filaments.</p>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200" alt="قص ليزر">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200" alt="Laser Cutting">
                 <div class="slide-caption">
-                    <h2>قص وتفريغ الخشب بالليزر</h2>
-                    <p>تصاميم هنسية وديكورات مخصصة بحرفية</p>
+                    <h2>Laser Cutting & Engraving</h2>
+                    <p>Custom laser cutting for acrylic, wood, and custom enclosures.</p>
                 </div>
             </div>
 
-            <!-- أزرار التحكم بالسلايدر -->
-            <button class="prev-btn" onclick="moveSlide(-1)">&#10095;</button>
-            <button class="next-btn" onclick="moveSlide(1)">&#10094;</button>
+            <!-- Slider Controls -->
+            <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
-    <!-- 3. MAIN BODY (بدن الموقع - نصوص بجانبها صورة مربعة صغيرة) -->
+    <!-- 3. MAIN BODY -->
     <main class="main-content" id="services">
         <div class="container">
             
-            <h2 class="section-title">مجالات عملنا</h2>
+            <h2 class="section-title">Our Capabilities</h2>
 
-            <!-- بلوك 1: مكونات إلكترونية -->
+            <!-- Feature 1: Electronics -->
             <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200" alt="صورة صغيرة" class="square-img">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200" alt="Electronics" class="square-img">
                 <div class="feature-text">
-                    <h3>المكونات الإلكترونية</h3>
-                    <p>نوفر تشكيلة واسعة من البوردات الحاكمة (Arduino, Raspberry Pi, ESP)، والحساسات، والقطع الدقيقة لمشاريع التخرج والمبتكرين بأعلى جودة واختبار دقيق.</p>
+                    <h3>Electronic Components</h3>
+                    <p>We supply authentic development boards (Arduino, Raspberry Pi, ESP), sensors, and specialized ICs tailored for students, makers, and engineering teams.</p>
                 </div>
             </div>
 
-            <!-- بلوك 2: طباعة 3D -->
+            <!-- Feature 2: 3D Printing -->
             <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200" alt="صورة صغيرة" class="square-img">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200" alt="3D Printing" class="square-img">
                 <div class="feature-text">
-                    <h3>خدمات الطباعة 3D</h3>
-                    <p>نحول تصميمك إلى واقع ملموس باحترافية، حيث نستخدم تقنيات الطباعة ثلاثية الأبعاد بخامات مختلفة (PLA, ABS, PETG) لتصنيع الهياكل والنماذج الأولية.</p>
+                    <h3>3D Printing Solutions</h3>
+                    <p>Transform your CAD designs into physical prototypes with our high-precision 3D printing services, supporting various durable materials and finishes.</p>
                 </div>
             </div>
 
-            <!-- بلوك 3: قص ليزر -->
+            <!-- Feature 3: Laser Cutting -->
             <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200" alt="صورة صغيرة" class="square-img">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200" alt="Laser Cutting" class="square-img">
                 <div class="feature-text">
-                    <h3>قص وحفر الخشب بالليزر</h3>
-                    <p>نقدم خدمة التقطيع والنقش بالليزر على الخشب والأكريليك بمقاسات مخصصة بدقة فائقة، لتنفيذ علب المشاريع والديكورات الهندسية.</p>
+                    <h3>Laser Cutting & Engraving</h3>
+                    <p>Custom laser cutting and engraving for wood and acrylic sheets, designed to produce clean custom frames, enclosures, and structural components.</p>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- 4. FOOTER (الفوتر وقنوات التواصل) -->
+    <!-- 4. FOOTER -->
     <footer class="footer" id="contact">
         <div class="container footer-content">
             <div class="footer-info">
                 <h3>PhyTronicx</h3>
-                <p>حلول إلكترونية وتصنيع رقمي في مكان واحد.</p>
+                <p>Your complete solution for electronic components & digital fabrication.</p>
             </div>
             
             <div class="footer-contact">
-                <h4>تواصل معنا</h4>
+                <h4>Get in Touch</h4>
                 <a href="https://wa.me/" target="_blank" class="wa-btn">
-                    <i class="fa-brands fa-whatsapp"></i> واتساب المبيعات
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
                 </a>
             </div>
 
             <div class="footer-social">
-                <h4>تابعنا على</h4>
+                <h4>Follow Us</h4>
                 <div class="social-icons">
                     <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     <a href="mailto:contact@phytronicx.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -128,11 +126,11 @@
         </div>
 
         <div class="copyright">
-            &copy; 2026 PhyTronicx. جميع الحقوق محفوظة.
+            &copy; 2026 PhyTronicx. All rights reserved.
         </div>
     </footer>
 
-    <!-- سكربت تحريك سلايدر الصور -->
+    <!-- Slider JavaScript -->
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
@@ -151,7 +149,7 @@
             showSlide(currentSlide);
         }
 
-        // تقليب تلقائي كل 4 ثواني
+        // Auto-play every 4 seconds
         setInterval(() => {
             moveSlide(1);
         }, 4000);
