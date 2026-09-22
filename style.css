@@ -1,127 +1,256 @@
+/* الألوان المحايدة والتجهيزات الأساسية */
 :root {
-    --bg: #0a192f;
-    --card-bg: #112240;
-    --primary: #00d2ff;
-    --accent: #f5a623;
-    --text: #e6f1ff;
-    --text-dim: #8892b0;
+    --bg-light: #f4f6f8;      /* خلفية بدن الموقع المحايدة */
+    --card-bg: #ffffff;       /* خلفية البطاقات ناصعة البياض */
+    --header-bg: #1e293b;     /* كحلي رمادي دافئ للهيدر والفوتر */
+    --text-color: #334155;    /* لون النصوص المريحة للعين */
+    --text-muted: #64748b;    /* لون ثانوي ناعم */
+    --accent: #2563eb;        /* أزرق محايد للروابط والعناوين */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-.card {
-    background: var(--card-bg);
-    width: 100%;
-    max-width: 500px;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* 1. HEADER */
+.header {
+    background-color: var(--header-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 20px;
+    height: 35px;
+    width: auto;
 }
 
-h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 5px;
+.brand-name {
     color: #fff;
-}
-
-h1 span {
-    color: var(--primary);
-}
-
-.subtitle {
-    color: var(--accent);
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-p {
-    color: var(--text-dim);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 35px;
-}
-
-.tag {
-    background: rgba(0, 210, 255, 0.1);
-    color: var(--primary);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.btn-whatsapp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #25d366;
-    color: #fff;
-    text-decoration: none;
-    padding: 14px 25px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: transform 0.2s, background 0.2s;
-}
-
-.btn-whatsapp:hover {
-    background: #20ba5a;
-    transform: translateY(-2px);
-}
-
-.socials {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.socials a {
-    color: var(--text-dim);
     font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.95rem;
     transition: color 0.2s;
 }
 
-.socials a:hover {
-    color: var(--primary);
+.nav-links a:hover {
+    color: #fff;
 }
 
-footer {
-    margin-top: 30px;
-    font-size: 0.8rem;
-    color: var(--text-dim);
+/* 2. FULL-WIDTH SLIDER */
+.slider-section {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 40px;
+    right: 10%;
+    color: #fff;
+    max-width: 80%;
+}
+
+.slide-caption h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}
+
+.prev-btn { right: 10px; }
+.next-btn { left: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* 3. MAIN CONTENT (بطاقات النصوص مع الصورة المربعة) */
+.main-content {
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 1.8rem;
+    color: var(--header-bg);
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.square-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.feature-text h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.feature-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* 4. FOOTER */
+.footer {
+    background: var(--header-bg);
+    color: #94a3b8;
+    padding: 40px 20px 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer h3, .footer h4 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.wa-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #22c55e;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #334155;
+    padding-top: 15px;
+    font-size: 0.85rem;
+}
+
+/* التجاوب مع الجوال */
+@media (max-width: 600px) {
+    .feature-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links a {
+        margin: 0 8px;
+    }
 }
