@@ -3,45 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <title>PhyTronicx | فايترونكس</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- أيقونة تبويب المتصفح (Favicon) -->
     <link rel="icon" type="image/png" href="PhyTronicx.png">
+    
+    <!-- خط Cairo أنيق ومحايد -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ربط ملف CSS الخارجي -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-        <img src="PhyTronicx.png" alt="PhyTronicx Logo" class="logo" onerror="this.style.display='none'">
+    <!-- 1. HEADER (الهيدر في الأعلى) -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="PhyTronicx.png" alt="PhyTronicx Logo" class="logo" onerror="this.style.display='none'">
+                <span class="brand-name">PhyTronicx</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#services">خدماتنا</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+        </div>
+    </header>
 
-        <h1>Phy<span>Tronicx</span></h1>
-        <div class="subtitle">إلكترونيات • حلول هندسية • متجر الكتروني</div>
+    <!-- 2. FULL-WIDTH SLIDER (معرض صور منزلق بكامل عرض الشاشة) -->
+    <section class="slider-section" id="home">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200" alt="إلكترونيات">
+                <div class="slide-caption">
+                    <h2>المكونات الإلكترونية والبوردات</h2>
+                    <p>أحدث الدوائر والحساسات لمشاريعك الهندسية</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200" alt="طباعة 3D">
+                <div class="slide-caption">
+                    <h2>خدمات الطباعة ثلاثية الأبعاد 3D</h2>
+                    <p>دقة عالية في تنفيذ المجسمات وبخامات متعددة</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200" alt="قص ليزر">
+                <div class="slide-caption">
+                    <h2>قص وتفريغ الخشب بالليزر</h2>
+                    <p>تصاميم هنسية وديكورات مخصصة بحرفية</p>
+                </div>
+            </div>
 
-        <p>نوفر المكونات الإلكترونية، وخدمات الطباعة ثلاثية الأبعاد (3D)، وقص الليزر لتنفيذ مشاريعك بكل إتقان.</p>
+            <!-- أزرار التحكم بالسلايدر -->
+            <button class="prev-btn" onclick="moveSlide(-1)">&#10095;</button>
+            <button class="next-btn" onclick="moveSlide(1)">&#10094;</button>
+        </div>
+    </section>
 
-        <div class="services">
-            <span class="tag">قطع إلكترونية</span>
-            <span class="tag">طباعة 3D</span>
-            <span class="tag">قص ليزر</span>
-            <span class="tag">حلول هندسية</span>
+    <!-- 3. MAIN BODY (بدن الموقع - نصوص بجانبها صورة مربعة صغيرة) -->
+    <main class="main-content" id="services">
+        <div class="container">
+            
+            <h2 class="section-title">مجالات عملنا</h2>
+
+            <!-- بلوك 1: مكونات إلكترونية -->
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200" alt="صورة صغيرة" class="square-img">
+                <div class="feature-text">
+                    <h3>المكونات الإلكترونية</h3>
+                    <p>نوفر تشكيلة واسعة من البوردات الحاكمة (Arduino, Raspberry Pi, ESP)، والحساسات، والقطع الدقيقة لمشاريع التخرج والمبتكرين بأعلى جودة واختبار دقيق.</p>
+                </div>
+            </div>
+
+            <!-- بلوك 2: طباعة 3D -->
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200" alt="صورة صغيرة" class="square-img">
+                <div class="feature-text">
+                    <h3>خدمات الطباعة 3D</h3>
+                    <p>نحول تصميمك إلى واقع ملموس باحترافية، حيث نستخدم تقنيات الطباعة ثلاثية الأبعاد بخامات مختلفة (PLA, ABS, PETG) لتصنيع الهياكل والنماذج الأولية.</p>
+                </div>
+            </div>
+
+            <!-- بلوك 3: قص ليزر -->
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200" alt="صورة صغيرة" class="square-img">
+                <div class="feature-text">
+                    <h3>قص وحفر الخشب بالليزر</h3>
+                    <p>نقدم خدمة التقطيع والنقش بالليزر على الخشب والأكريليك بمقاسات مخصصة بدقة فائقة، لتنفيذ علب المشاريع والديكورات الهندسية.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 4. FOOTER (الفوتر وقنوات التواصل) -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>PhyTronicx</h3>
+                <p>حلول إلكترونية وتصنيع رقمي في مكان واحد.</p>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>تواصل معنا</h4>
+                <a href="https://wa.me/" target="_blank" class="wa-btn">
+                    <i class="fa-brands fa-whatsapp"></i> واتساب المبيعات
+                </a>
+            </div>
+
+            <div class="footer-social">
+                <h4>تابعنا على</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="mailto:contact@phytronicx.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
 
-        <a href="https://wa.me/00249991117411" target="_blank" class="btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> تواصل معنا عبر الواتساب
-        </a>
-
-        <div class="socials">
-            <a href="https://www.facebook.com/phytronicx" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="mailto:contact@phytronicx.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-
-        <footer>
+        <div class="copyright">
             &copy; 2026 PhyTronicx. جميع الحقوق محفوظة.
-        </footer>
-    </div>
+        </div>
+    </footer>
 
+    <!-- سكربت تحريك سلايدر الصور -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function moveSlide(step) {
+            currentSlide += step;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        // تقليب تلقائي كل 4 ثواني
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
 </body>
 </html>
