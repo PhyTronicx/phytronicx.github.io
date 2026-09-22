@@ -1,18 +1,18 @@
-/* الألوان المحايدة والتجهيزات الأساسية */
+/* Neutral Colors & Base Settings */
 :root {
-    --bg-light: #f4f6f8;      /* خلفية بدن الموقع المحايدة */
-    --card-bg: #ffffff;       /* خلفية البطاقات ناصعة البياض */
-    --header-bg: #1e293b;     /* كحلي رمادي دافئ للهيدر والفوتر */
-    --text-color: #334155;    /* لون النصوص المريحة للعين */
-    --text-muted: #64748b;    /* لون ثانوي ناعم */
-    --accent: #2563eb;        /* أزرق محايد للروابط والعناوين */
+    --bg-light: #f4f6f8;      /* Neutral background */
+    --card-bg: #ffffff;       /* Pure white card background */
+    --header-bg: #1e293b;     /* Dark slate blue for header/footer */
+    --text-color: #334155;    /* Body text color */
+    --text-muted: #64748b;    /* Subtitle text color */
+    --accent: #2563eb;        /* Professional blue accent */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -59,8 +59,9 @@ body {
 .nav-links a {
     color: #cbd5e1;
     text-decoration: none;
-    margin-right: 20px;
+    margin-left: 20px;
     font-size: 0.95rem;
+    font-weight: 500;
     transition: color 0.2s;
 }
 
@@ -71,7 +72,7 @@ body {
 /* 2. FULL-WIDTH SLIDER */
 .slider-section {
     width: 100%;
-    height: 350px;
+    height: 360px;
     position: relative;
     overflow: hidden;
     background: #000;
@@ -107,7 +108,7 @@ body {
 .slide-caption {
     position: absolute;
     bottom: 40px;
-    right: 10%;
+    left: 10%;
     color: #fff;
     max-width: 80%;
 }
@@ -130,14 +131,14 @@ body {
     border-radius: 4px;
 }
 
-.prev-btn { right: 10px; }
-.next-btn { left: 10px; }
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
 .prev-btn:hover, .next-btn:hover {
     background: rgba(0,0,0,0.8);
 }
 
-/* 3. MAIN CONTENT (بطاقات النصوص مع الصورة المربعة) */
+/* 3. MAIN CONTENT */
 .main-content {
     padding: 50px 20px;
 }
@@ -240,7 +241,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* التجاوب مع الجوال */
+/* Responsive adjustments */
 @media (max-width: 600px) {
     .feature-card {
         flex-direction: column;
