@@ -65,7 +65,7 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
 }
 
 .nav-link {
@@ -186,7 +186,47 @@ body {
 .slider-arrow.prev { left: 24px; }
 .slider-arrow.next { right: 24px; }
 
-/* 3. MAIN BODY FEATURES */
+/* 3. TRUSTED BY SECTION */
+.trusted-section {
+    padding: 40px 24px;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.trusted-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.logo-item:hover {
+    color: var(--text-primary);
+}
+
+/* 4. MAIN BODY FEATURES */
 .main-body {
     padding: 80px 24px;
     background-color: var(--bg-main);
@@ -262,7 +302,55 @@ body {
     color: var(--text-muted);
 }
 
-/* 4. FOOTER */
+/* 5. TESTIMONIALS SECTION */
+.testimonials-section {
+    padding: 80px 24px;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+.quote {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.client-info strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.client-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* 6. FOOTER */
 .footer-section {
     background-color: var(--text-primary);
     color: #94a3b8;
@@ -345,5 +433,8 @@ body {
     }
     .slide-title {
         font-size: 1.6rem;
+    }
+    .logos-grid {
+        gap: 24px;
     }
 }
