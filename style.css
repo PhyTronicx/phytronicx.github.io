@@ -438,3 +438,35 @@ body {
         gap: 24px;
     }
 }
+/* Coming Soon Dimmed Cards Styling */
+.feature-row.coming-soon-card {
+    position: relative;
+    overflow: hidden;
+    pointer-events: none; /* لمنع التفاعل مع البطاقة */
+}
+
+/* جعل المحتوى باهت (Dimmed) */
+.feature-row.coming-soon-card .feature-img-wrapper,
+.feature-row.coming-soon-card .feature-info {
+    opacity: 0.35;
+    filter: grayscale(40%);
+}
+
+/* شارة Coming Soon البارزة */
+.badge-soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--text-primary);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 8px 24px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
