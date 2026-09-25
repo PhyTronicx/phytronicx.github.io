@@ -3,156 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhyTronicx | Electronics & Digital Fabrication</title>
+    <title>Home - PhyTronicx</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="PhyTronicx.png">
     
-    <!-- Google Fonts (Montserrat) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter & Montserrat (IMKAN Style Clean Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Stylesheet -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. HEADER -->
+    <!-- HEADER / NAVIGATION -->
     <header class="header">
         <div class="header-container">
-            <div class="logo-area">
-                <img src="PhyTronicx.png" alt="PhyTronicx Logo" class="logo" onerror="this.style.display='none'">
-                <span class="brand-name">PhyTronicx</span>
-            </div>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+            <a href="#" class="brand-logo">
+                <img src="PhyTronicx.png" alt="PhyTronicx" class="logo-img" onerror="this.style.display='none'">
+                <span class="brand-title">PhyTronicx</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link btn-contact">Contact Us</a>
             </nav>
         </div>
     </header>
 
-    <!-- 2. FULL-WIDTH SLIDER -->
-    <section class="slider-section" id="home">
-        <div class="slider-container">
+    <!-- MAIN SLIDER SECTION -->
+    <section class="hero-slider" id="home">
+        <div class="slider-wrapper">
+            <!-- Slide 1 -->
             <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200" alt="Electronics">
-                <div class="slide-caption">
-                    <h2>Electronic Components & Boards</h2>
-                    <p>High-grade microcontrollers and sensors for engineering projects.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200" alt="3D Printing">
-                <div class="slide-caption">
-                    <h2>3D Printing Services</h2>
-                    <p>Precision prototyping using PLA, ABS, and PETG filaments.</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200" alt="Laser Cutting">
-                <div class="slide-caption">
-                    <h2>Laser Cutting & Engraving</h2>
-                    <p>Custom laser cutting for acrylic, wood, and custom enclosures.</p>
+                <img src="images/slide1.jpg" alt="Electronic Components" class="slide-img">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">Technology & Hardware</span>
+                        <h1 class="slide-title">Electronic Components & Hardware</h1>
+                        <p class="slide-desc">Providing high-grade development microcontrollers, sensors, and ICs for advanced engineering applications.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slider Controls -->
-            <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="3D Printing Services" class="slide-img">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">Digital Fabrication</span>
+                        <h1 class="slide-title">Precision 3D Printing Solutions</h1>
+                        <p class="slide-desc">Transforming CAD models into physical prototypes using high-quality PLA, ABS, and PETG materials.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="Laser Cutting Services" class="slide-img">
+                <div class="slide-subtitle">Manufacturing</div>
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">Custom Fabrication</span>
+                        <h1 class="slide-title">Laser Cutting & Engraving</h1>
+                        <p class="slide-desc">High-precision laser processing for wood, acrylic, and custom engineering enclosures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button class="slider-arrow prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-arrow next" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </section>
 
-    <!-- 3. MAIN BODY -->
-    <main class="main-content" id="services">
-        <div class="container">
+    <!-- CONTENT SECTION (IMKAN Minimal Feature Blocks) -->
+    <main class="main-body" id="services">
+        <div class="section-container">
             
-            <h2 class="section-title">Our Capabilities</h2>
+            <div class="section-header">
+                <span class="section-tagline">Core Capabilities</span>
+                <h2 class="section-heading">Our Key Technical Offerings</h2>
+                <div class="divider"></div>
+            </div>
 
-            <!-- Feature 1: Electronics -->
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200" alt="Electronics" class="square-img">
-                <div class="feature-text">
-                    <h3>Electronic Components</h3>
-                    <p>We supply authentic development boards (Arduino, Raspberry Pi, ESP), sensors, and specialized ICs tailored for students, makers, and engineering teams.</p>
+            <!-- Feature Block 1 -->
+            <div class="feature-row">
+                <div class="feature-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300" alt="Electronics Supply" class="square-thumb">
+                </div>
+                <div class="feature-info">
+                    <h3 class="feature-title">Electronics & Microcontrollers</h3>
+                    <p class="feature-text">We supply authentic development boards (Arduino, Raspberry Pi, ESP), sensors, and specialized components tailored for students, makers, and engineering teams.</p>
                 </div>
             </div>
 
-            <!-- Feature 2: 3D Printing -->
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200" alt="3D Printing" class="square-img">
-                <div class="feature-text">
-                    <h3>3D Printing Solutions</h3>
-                    <p>Transform your CAD designs into physical prototypes with our high-precision 3D printing services, supporting various durable materials and finishes.</p>
+            <!-- Feature Block 2 -->
+            <div class="feature-row">
+                <div class="feature-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300" alt="3D Printing" class="square-thumb">
+                </div>
+                <div class="feature-info">
+                    <h3 class="feature-title">3D Printing Services</h3>
+                    <p class="feature-text">Turn complex CAD designs into functional physical prototypes with our high-precision 3D printing equipment, ensuring accurate tolerances and surface quality.</p>
                 </div>
             </div>
 
-            <!-- Feature 3: Laser Cutting -->
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200" alt="Laser Cutting" class="square-img">
-                <div class="feature-text">
-                    <h3>Laser Cutting & Engraving</h3>
-                    <p>Custom laser cutting and engraving for wood and acrylic sheets, designed to produce clean custom frames, enclosures, and structural components.</p>
+            <!-- Feature Block 3 -->
+            <div class="feature-row">
+                <div class="feature-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=300" alt="Laser Cutting" class="square-thumb">
+                </div>
+                <div class="feature-info">
+                    <h3 class="feature-title">Laser Cutting & Engraving</h3>
+                    <p class="feature-text">Custom CNC laser cutting for acrylic and wood sheets, providing clean geometric cuts and engraving for enclosures, frames, and custom structures.</p>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- 4. FOOTER -->
-    <footer class="footer" id="contact">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <h3>PhyTronicx</h3>
-                <p>Your complete solution for electronic components & digital fabrication.</p>
+    <!-- FOOTER -->
+    <footer class="footer-section" id="contact">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <h3 class="footer-brand">PhyTronicx</h3>
+                <p class="footer-desc">Engineering excellence in electronic components supply and digital fabrication solutions.</p>
             </div>
-            
-            <div class="footer-contact">
-                <h4>Get in Touch</h4>
-                <a href="https://wa.me/" target="_blank" class="wa-btn">
+
+            <div class="footer-col contact-col">
+                <h4>Get In Touch</h4>
+                <a href="https://wa.me/" target="_blank" class="whatsapp-link">
                     <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
                 </a>
             </div>
 
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <div class="footer-col social-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="mailto:contact@phytronicx.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="copyright">
-            &copy; 2026 PhyTronicx. All rights reserved.
+        <div class="footer-bottom">
+            <p>&copy; 2026 PhyTronicx. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Slider JavaScript -->
+    <!-- Slider JS -->
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
 
         function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) slide.classList.add('active');
+            slides.forEach((s, i) => {
+                s.classList.remove('active');
+                if (i === index) s.classList.add('active');
             });
         }
 
-        function moveSlide(step) {
+        function changeSlide(step) {
             currentSlide += step;
             if (currentSlide >= slides.length) currentSlide = 0;
             if (currentSlide < 0) currentSlide = slides.length - 1;
             showSlide(currentSlide);
         }
 
-        // Auto-play every 4 seconds
+        // Auto slider transition
         setInterval(() => {
-            moveSlide(1);
-        }, 4000);
+            changeSlide(1);
+        }, 5000);
     </script>
 </body>
 </html>
